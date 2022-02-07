@@ -3,7 +3,7 @@ const keys = ['c-key', 'd-key', 'e-key', 'f-key', 'g-key', 'a-key', 'b-key', 'hi
 const notes = [];
 keys.forEach(function(key){
   notes.push(document.getElementById(key));
-})
+});
 
 // Write named functions that change the color of the keys below
 

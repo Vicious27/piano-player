@@ -6,7 +6,22 @@ keys.forEach(function(key){
 });
 
 // Write named functions that change the color of the keys below
+const keyPlay = function(event) {
+  event.target.style.backgroundColor = 'teal';
+};
 
+const keyReturn = function(event) {
+  event.target.style.backgroundColor = '';
+};
+
+function changeKeyColors(note) {
+  note.mousedown = function(event) {
+    keyPlay(event);
+  };
+  note.mouseup = function(event) {
+    keyReturn(event);
+  };
+}
 
 // Write a named function with event handler properties
 

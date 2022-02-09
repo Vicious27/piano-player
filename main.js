@@ -27,7 +27,7 @@ function changeKeyColors(note) {
 
 
 // Write a loop that runs the array elements through the function
-
+notes.forEach(changeKeyColors);
 
 // These variables store the buttons that progress the user through the lyrics
 let nextOne = document.getElementById('first-next-line');

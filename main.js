@@ -14,17 +14,11 @@ const keyReturn = function(event) {
   event.target.style.backgroundColor = '';
 };
 
-function changeKeyColors(note) {
-  note.mousedown = function(event) {
-    keyPlay(event);
-  };
-  note.mouseup = function(event) {
-    keyReturn(event);
-  };
-}
-
 // Write a named function with event handler properties
-
+let changeKeyColors = function(note) {
+  note.addEventListener('mousedown', keyPlay);
+  note.addEventListener('mouseup', keyReturn);
+};
 
 // Write a loop that runs the array elements through the function
 notes.forEach(changeKeyColors);
@@ -68,4 +62,4 @@ startOver.onclick = function() {
   document.getElementById('letter-note-five').innerHTML = 'C';
   document.getElementById('word-six').innerHTML = 'YOU!';
   document.getElementById('letter-note-six').innerHTML = 'B';
-}
+};
